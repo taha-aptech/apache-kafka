@@ -4,7 +4,7 @@ import time
 producer = KafkaProducer(bootstrap_servers='localhost:6667')
 
 for i in range(10):
-    message = f'Hello Kafka! Message {i}'
+    message = 'Hello Kafka! Message {}'.format(i)
     producer.send('test_topic_python', message.encode('utf-8'))
     print(f"Sent: {message}")
     time.sleep(1)
