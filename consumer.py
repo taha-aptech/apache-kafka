@@ -9,5 +9,4 @@ consumer = KafkaConsumer(
 
 print("Listening to Kafka topic...")
 for message in consumer:
-   print("Received: %s" % message.value.decode('utf-8'))
-
+    print("Received: %s" % message.value.decode('utf-8'))
