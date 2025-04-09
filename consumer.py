@@ -1,7 +1,7 @@
 from kafka import KafkaConsumer
 
 consumer = KafkaConsumer(
-    'test-topic',
+    'test_topic_python',
     bootstrap_servers='localhost:6667',
     auto_offset_reset='earliest',
     group_id='test-group'
