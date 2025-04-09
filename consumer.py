@@ -1,0 +1,12 @@
+from kafka import KafkaConsumer
+
+consumer = KafkaConsumer(
+    'test-topic',
+    bootstrap_servers='localhost:6667',
+    auto_offset_reset='earliest',
+    group_id='test-group'
+)
+
+print("Listening to Kafka topic...")
+for message in consumer:
+    print(f"Received: {message.value.decode('utf-8')}")
